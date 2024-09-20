@@ -1,0 +1,133 @@
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  /* For some Androids */
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  text-rendering: geometricPrecision;
+  width: 100%;
+  height: 100%;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  font-size: clamp(16px, 1.1vw, 26px);
+  line-height: 1.2;
+  color: #000000;
+}
+.fretboard-section {
+  width: 100%;
+  margin: 30px 0;
+  overflow-y: scroll;
+  background-color: brown;
+}
+.fretboard-section .fretboard {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+.fretboard-section .fretboard .fret {
+  height: 200px;
+  flex-basis: 10%;
+  min-width: 130px;
+  flex-shrink: 0;
+  border-left: 3px solid grey;
+  position: relative;
+}
+.fretboard-section .fretboard .fret .string {
+  width: 100%;
+  background-color: lightblue;
+  height: 6px;
+  position: absolute;
+  left: 0;
+  top: 8%;
+  z-index: 40;
+}
+.fretboard-section .fretboard .fret .string::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+  border-radius: 200px;
+  transform: translate(-50%, -50%);
+  z-index: 50;
+}
+.fretboard-section .fretboard .fret .string:nth-child(2) {
+  height: 5px;
+  top: 24%;
+}
+.fretboard-section .fretboard .fret .string:nth-child(3) {
+  height: 4px;
+  top: 40%;
+}
+.fretboard-section .fretboard .fret .string:nth-child(4) {
+  height: 3px;
+  top: 58%;
+}
+.fretboard-section .fretboard .fret .string:nth-child(5) {
+  height: 2px;
+  top: 75%;
+}
+.fretboard-section .fretboard .fret .string:last-child {
+  height: 1px;
+  top: 92%;
+}
+.fretboard-section .fretboard .fret:first-child .string::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 2px solid blue;
+  border-radius: 200px;
+  transform: translate(-50%, -50%);
+  z-index: 50;
+}
+.fretboard-section .fretboard .fret:last-child {
+  border-right: 3px solid grey;
+}
+.fretboard-section .fretboard .fret:nth-child(3)::after,
+.fretboard-section .fretboard .fret:nth-child(5)::after,
+.fretboard-section .fretboard .fret:nth-child(7)::after,
+.fretboard-section .fretboard .fret:nth-child(9)::after,
+.fretboard-section .fretboard .fret:nth-child(15)::after,
+.fretboard-section .fretboard .fret:nth-child(17)::after,
+.fretboard-section .fretboard .fret:nth-child(19)::after,
+.fretboard-section .fretboard .fret:nth-child(21)::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.fretboard-section .fretboard .fret:nth-child(12)::after,
+.fretboard-section .fretboard .fret:nth-child(12)::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 200px;
+  top: 66%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.fretboard-section .fretboard .fret:nth-child(12)::before {
+  top: 33%;
+}
