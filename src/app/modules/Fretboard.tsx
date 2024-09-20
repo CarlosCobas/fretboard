@@ -8,13 +8,13 @@ export default function Fretboard() {
 
     const generateFretNotes = (fretIndex: number) => 
         standardTuning.map(note => {
-            let noteIndex = notes.indexOf(note);
+            const noteIndex = notes.indexOf(note);
             return notes[(noteIndex + fretIndex) % notes.length]
         });
 
     // const frets = Array(21).fill(<Fret validNotes={standardTuning}/>)
     const generateFrets = () => {
-        let res = [];
+        const res = [];
         
         for (let index = 0; index < totalFrets; index++) {
             const validNotes = generateFretNotes(index);
