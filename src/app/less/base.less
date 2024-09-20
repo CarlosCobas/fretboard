@@ -51,8 +51,7 @@ body {
                 z-index: 40;
 
 
-                &::after {
-                    content: '';
+                .note-value {
                     position: absolute;
                     top: 50%;
                     left: 50%;
@@ -62,6 +61,8 @@ body {
                     border-radius: 200px;
                     transform: translate(-50%, -50%);
                     z-index: 50;
+                    color: white;
+                    text-align: center;
                 }
 
                 &:nth-child(2) {
@@ -90,20 +91,15 @@ body {
                 }
             }
 
-            &:first-child {
+            &.fret-zero {
+                min-width: auto;
+                width: 0;
+                flex-basis: auto;
+                border: none;
                 .string {
-                    &::before {
-                        content: '';
-                        position: absolute;
-                        top: 50%;
-                        left: 0%;
-                        width: 20px;
-                        height: 20px;
+                    .note-value {
                         background-color: transparent;
                         border: 2px solid blue;
-                        border-radius: 200px;
-                        transform: translate(-50%, -50%);
-                        z-index: 50;
                     }
                 }
             }
@@ -113,14 +109,14 @@ body {
             }
 
 
-            &:nth-child(3),
-            &:nth-child(5),
-            &:nth-child(7),
-            &:nth-child(9),
-            &:nth-child(15), 
-            &:nth-child(17), 
-            &:nth-child(19),
-            &:nth-child(21) {
+            &:nth-child(4),
+            &:nth-child(6),
+            &:nth-child(8),
+            &:nth-child(10),
+            &:nth-child(16), 
+            &:nth-child(18), 
+            &:nth-child(20),
+            &:nth-child(22) {
 
                 &::after {
                     content: '';
@@ -137,7 +133,7 @@ body {
                
             }
         
-            &:nth-child(12) {
+            &:nth-child(13) {
 
                 &::after,
                 &::before {

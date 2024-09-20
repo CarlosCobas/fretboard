@@ -48,8 +48,7 @@ body {
   top: 8%;
   z-index: 40;
 }
-.fretboard-section .fretboard .fret .string::after {
-  content: '';
+.fretboard-section .fretboard .fret .string .note-value {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -59,6 +58,8 @@ body {
   border-radius: 200px;
   transform: translate(-50%, -50%);
   z-index: 50;
+  color: white;
+  text-align: center;
 }
 .fretboard-section .fretboard .fret .string:nth-child(2) {
   height: 5px;
@@ -80,30 +81,27 @@ body {
   height: 1px;
   top: 92%;
 }
-.fretboard-section .fretboard .fret:first-child .string::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 0%;
-  width: 20px;
-  height: 20px;
+.fretboard-section .fretboard .fret.fret-zero {
+  min-width: auto;
+  width: 0;
+  flex-basis: auto;
+  border: none;
+}
+.fretboard-section .fretboard .fret.fret-zero .string .note-value {
   background-color: transparent;
   border: 2px solid blue;
-  border-radius: 200px;
-  transform: translate(-50%, -50%);
-  z-index: 50;
 }
 .fretboard-section .fretboard .fret:last-child {
   border-right: 3px solid grey;
 }
-.fretboard-section .fretboard .fret:nth-child(3)::after,
-.fretboard-section .fretboard .fret:nth-child(5)::after,
-.fretboard-section .fretboard .fret:nth-child(7)::after,
-.fretboard-section .fretboard .fret:nth-child(9)::after,
-.fretboard-section .fretboard .fret:nth-child(15)::after,
-.fretboard-section .fretboard .fret:nth-child(17)::after,
-.fretboard-section .fretboard .fret:nth-child(19)::after,
-.fretboard-section .fretboard .fret:nth-child(21)::after {
+.fretboard-section .fretboard .fret:nth-child(4)::after,
+.fretboard-section .fretboard .fret:nth-child(6)::after,
+.fretboard-section .fretboard .fret:nth-child(8)::after,
+.fretboard-section .fretboard .fret:nth-child(10)::after,
+.fretboard-section .fretboard .fret:nth-child(16)::after,
+.fretboard-section .fretboard .fret:nth-child(18)::after,
+.fretboard-section .fretboard .fret:nth-child(20)::after,
+.fretboard-section .fretboard .fret:nth-child(22)::after {
   content: '';
   position: absolute;
   width: 20px;
@@ -115,8 +113,8 @@ body {
   transform: translate(-50%, -50%);
   z-index: 10;
 }
-.fretboard-section .fretboard .fret:nth-child(12)::after,
-.fretboard-section .fretboard .fret:nth-child(12)::before {
+.fretboard-section .fretboard .fret:nth-child(13)::after,
+.fretboard-section .fretboard .fret:nth-child(13)::before {
   content: '';
   position: absolute;
   width: 20px;
@@ -128,6 +126,6 @@ body {
   transform: translate(-50%, -50%);
   z-index: 10;
 }
-.fretboard-section .fretboard .fret:nth-child(12)::before {
+.fretboard-section .fretboard .fret:nth-child(13)::before {
   top: 33%;
 }
