@@ -1,6 +1,8 @@
 import Fret from './Fret'
+import { RootNoteContext } from "../contexts/RootNoteContext"
+import { notes } from "../utils/notes";
 
-export default function Fretboard({notes} : {notes:Array<string>}) {
+export default function Fretboard({rootNote} : {rootNote:string}) {
 
     const totalFrets = 22;
     const standardTuning = ['E', 'A', 'D', 'G', 'B', 'E'];
@@ -11,7 +13,6 @@ export default function Fretboard({notes} : {notes:Array<string>}) {
             return notes[(noteIndex + fretIndex) % notes.length]
         });
 
-    // const frets = Array(21).fill(<Fret validNotes={standardTuning}/>)
     const generateFrets = () => {
         const res = [];
         
@@ -26,9 +27,12 @@ export default function Fretboard({notes} : {notes:Array<string>}) {
 
     return(
         <section className="fretboard-section">
-            <div className="fretboard">
-                {generateFrets()}
-            </div>
+            <RootNoteContext.Provider value={rootNote} >
+                <div className="fretboard">
+                    {generateFrets()}
+                </div> 
+            </RootNoteContext.Provider>
+                
         </section>
     );
 }

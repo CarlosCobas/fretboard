@@ -1,13 +1,7 @@
 import React from "react";
+import { modalities } from "../utils/modalities";
 
 export default function Modalityslector() {
-
-    const modalities = [
-        'Show all notes',
-        'Modes',
-        'Arpegios',
-        'Pentatonic Scale',
-    ]; 
 
     const options = modalities.map(modality => <option key={modality} value={modality}>{modality}</option>)
 

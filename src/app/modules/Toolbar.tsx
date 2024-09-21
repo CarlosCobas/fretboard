@@ -1,11 +1,12 @@
+import { ChangeEventHandler } from 'react';
 import ModalitySelector from './ModalitySelector';
 import RootNoteSelector from './RootNoteSelector'
 
-export default function Toolbar({notes} : {notes:Array<string>}) {
+export default function Toolbar({onChangeRootNote} : {onChangeRootNote:ChangeEventHandler<HTMLSelectElement>}) {
 
     return (
         <section className="toolbar-holder">
-            <RootNoteSelector notes={notes}/>
+            <RootNoteSelector onChangeRootNote={onChangeRootNote}/>
             <ModalitySelector/>
         </section>
     );

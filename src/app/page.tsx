@@ -1,16 +1,23 @@
+"use client";
+
 import Fretboard from "./modules/Fretboard";
 import Toolbar from "./modules/Toolbar";
+import { notes } from "./utils/notes";
+import { useState } from "react";
+
 
 export default function Home() {
 
-  const notes = ['A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#'];
+  const [rootNote, setRootNote] = useState(notes[0]);
 
-
+  const onChangeRootNote = (e) => {
+    setRootNote(e.target.value)
+  }
 
   return (
     <main>
-      <Toolbar notes={notes}/>
-      <Fretboard notes={notes}/>
+      <Toolbar onChangeRootNote={onChangeRootNote}/>      
+      <Fretboard rootNote={rootNote}/>
     </main>
   );
 }

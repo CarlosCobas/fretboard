@@ -20,6 +20,19 @@ body {
     color: #000000;
 }
 
+@root: red;
+@b_second: orange;
+@second: yellow;
+@b_third: chartreuse;
+@third: green;
+@fourth: SpringGreen;
+@b_fifth: cyan;
+@fifth: azure;
+@b_sixth: blue;
+@sixth: violet;
+@b_seventh: magenta;
+@seventh: pink;
+
 
 .fretboard-section {
     width: 100%;
@@ -62,15 +75,63 @@ body {
                     left: 50%;
                     width: 20px;
                     height: 20px;
-                    background-color: blue;
-                    border: 2px solid blue;
                     border-radius: 200px;
                     transform: translate(-50%, -50%);
                     z-index: 50;
-                    color: white;
+                    // color: white;
+                    color: black;
                     text-align: center;
                     padding: 2px;
                     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.36);
+
+                    &.root {
+                        background-color: @root;
+                        border: 2px solid @root;
+                    }
+                    &.b_second {
+                        background-color: @b_second;
+                        border: 2px solid @b_second;
+                    }
+                    &.second {
+                        background-color: @second;
+                        border: 2px solid @second;
+                    }
+                    &.b_third {
+                        background-color: @b_third;
+                        border: 2px solid @b_third;
+                    }
+                    &.third {
+                        background-color: @third;
+                        border: 2px solid @third;
+                    }
+                    &.fourth {
+                        background-color: @fourth;
+                        border: 2px solid @fourth;
+                    }
+                    &.b_fifth {
+                        background-color: @b_fifth;
+                        border: 2px solid @b_fifth;
+                    }
+                    &.fifth {
+                        background-color: @fifth;
+                        border: 2px solid @fifth;
+                    }
+                    &.b_sixth {
+                        background-color: @b_sixth;
+                        border: 2px solid @b_sixth;
+                    }
+                    &.sixth {
+                        background-color: @sixth;
+                        border: 2px solid @sixth;
+                    }
+                    &.b_seventh {
+                        background-color: @b_seventh;
+                        border: 2px solid @b_seventh;
+                    }
+                    &.seventh {
+                        background-color: @seventh;
+                        border: 2px solid @seventh;
+                    }
                 }
 
                 &:nth-child(2) {
