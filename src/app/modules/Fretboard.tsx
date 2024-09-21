@@ -1,9 +1,8 @@
 import Fret from './Fret'
 
-export default function Fretboard() {
+export default function Fretboard({notes} : {notes:Array<string>}) {
 
     const totalFrets = 22;
-    const notes = ['A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#'];
     const standardTuning = ['E', 'A', 'D', 'G', 'B', 'E'];
 
     const generateFretNotes = (fretIndex: number) => 
