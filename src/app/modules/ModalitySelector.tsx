@@ -1,8 +1,8 @@
-import React, { ChangeEventHandler } from "react";
+import React from "react";
 import { FormControl, InputLabel, MenuItem, Select } from "../../../node_modules/@mui/material/index";
 import { modalities } from "../utils/modalities";
 
-export default function Modalityslector({modality, onChangeModality} : { modality:string, onChangeModality:ChangeEventHandler<HTMLSelectElement>}) {
+export default function Modalityslector({modality, onChangeModality}) {
 
     // const options = modalities.map(modality => <option key={modality.value} value={modality.value}>{modality.label}</option>)
     const options = modalities.map(modality =>  <MenuItem key={modality.value} value={modality.value}>{modality.label}</MenuItem>)

@@ -1,10 +1,8 @@
 import React from "react";
 import { generateMajorScale, orderNotesOnRoot } from "../utils/notes";
 import { modes_data } from "../utils/modalities";
-import { Container } from "../../../node_modules/@mui/material/index";
 import { DataGrid, GridColDef } from "../../../node_modules/@mui/x-data-grid";
 import { intervals } from "../utils/intervals";
-
 
 export default function ModesTable({rootNote} : {rootNote:string}) {
 
@@ -160,26 +158,19 @@ export default function ModesTable({rootNote} : {rootNote:string}) {
 
     return (
         <section className="modes-table">
-           <Container maxWidth="l">
-                <div className="header-holder">
-                    <h1>Tabla de modos complementarios para {rootNote}</h1>
-                </div>
+            <div className="header-holder">
+                  <h1>Tabla de modos complementarios para {rootNote}</h1>
+              </div>
 
-                <div className="table-holder">
-                    <DataGrid
-                        rows={rows}
-                        columns={columns}
-                        initialState={{
-                            pagination: false
-                        }}
-                        // pageSizeOptions={[5]}
-                        // checkboxSelection
-                        disableRowSelectionOnClick
-                        hideFooter={true}
-                        getRowId={getRowId}
-                    />
-                </div>
-           </Container>
+              <div className="table-holder">
+                  <DataGrid
+                      rows={rows}
+                      columns={columns}
+                      disableRowSelectionOnClick
+                      hideFooter={true}
+                      getRowId={getRowId}
+                  />
+              </div>
         </section>
     );
 

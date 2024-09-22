@@ -1,8 +1,8 @@
-import React, { ChangeEventHandler } from "react";
+import React from "react";
 import { FormControl, InputLabel, MenuItem, Select } from "../../../node_modules/@mui/material/index";
 import { notes } from "../utils/notes";
 
-export default function RootNoteSelector({rootNote, onChangeRootNote} : { rootNote:string, onChangeRootNote:ChangeEventHandler<HTMLSelectElement>}) {
+export default function RootNoteSelector({rootNote, onChangeRootNote}) {
     
     const options = notes.map(note =>  <MenuItem key={note} value={note}>{note}</MenuItem>)
 

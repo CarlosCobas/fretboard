@@ -21,7 +21,6 @@ body {
 }
 .toolbar-holder {
   padding: 10px 0;
-  margin: 0 auto;
   position: sticky;
   top: 0;
   background-color: white;
@@ -29,6 +28,7 @@ body {
 }
 .toolbar-holder .toolbar-flex {
   width: 96%;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -202,5 +202,7 @@ body {
   top: 33%;
 }
 .modes-table {
+  width: 96%;
+  margin: 0 auto;
   padding-bottom: 30px;
 }
