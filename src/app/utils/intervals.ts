@@ -5,7 +5,7 @@ export const intervals = [
     'b_third',
     'third',
     'fourth',
-    'b_fifth',
+    'b_fifthxsharp_fourth',
     'fifth',
     'b_sixth',
     'sixth',

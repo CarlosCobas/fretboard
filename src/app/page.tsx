@@ -2,6 +2,7 @@
 
 import Fretboard from "./modules/Fretboard";
 import Toolbar from "./modules/Toolbar";
+import ModesTable from "./modules/ModesTable"
 import { notes } from "./utils/notes";
 import { SetStateAction, useState } from "react";
 import { modalities } from "./utils/modalities";
@@ -22,8 +23,9 @@ export default function Home() {
 
   return (
     <main>
-      <Toolbar onChangeRootNote={onChangeRootNote} onChangeModality={onChangeModality}/>      
+      <Toolbar rootNote={rootNote} modality={modality} onChangeRootNote={onChangeRootNote} onChangeModality={onChangeModality}/>      
       <Fretboard rootNote={rootNote} modality={modality}/>
+      {/* <ModesTable rootNote={rootNote}/> */}
     </main>
   );
 }

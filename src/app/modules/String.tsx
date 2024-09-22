@@ -1,4 +1,4 @@
-import { notes } from "../utils/notes";
+import { orderNotesOnRoot } from "../utils/notes";
 import { useContext } from 'react';
 import { RootNoteContextObject } from "../contexts/RootNoteContext"
 import { intervals } from "../utils/intervals";
@@ -8,15 +8,10 @@ export default function String({note} : {note:string}) {
 
     const stateData = useContext(RootNoteContextObject);
 
-    const rearrangeArray = (rootNote: string) => {
-        const index = notes.indexOf(rootNote);
-        const notesFromRoot = notes.slice(index);
-        const restOfNotes = notes.slice(0, index);
-        return notesFromRoot.concat(restOfNotes);
-    }
+    
 
     const calculateInterval = (currentNote: string, rootNote: string)  => {
-        const notesWithRootAtStart = rearrangeArray(rootNote);
+        const notesWithRootAtStart = orderNotesOnRoot(rootNote);
         const currentNoteIndex = notesWithRootAtStart.indexOf(currentNote);
         return intervals[currentNoteIndex];
     }
