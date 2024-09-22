@@ -106,7 +106,7 @@ export default function ModesTable({rootNote} : {rootNote:string}) {
         });
 
 
-        aux.forEach((element, index) => {
+        aux.forEach((element) => {
 
             const orderedNotes = orderNotesOnRoot(element.root_note);
             const mode_notes = {
@@ -124,11 +124,11 @@ export default function ModesTable({rootNote} : {rootNote:string}) {
             };
 
             element.intervals.forEach((element) => {
-                let interval_index = intervals.indexOf(element);
+                const interval_index = intervals.indexOf(element);
                 mode_notes[element as keyof typeof mode_notes] = orderedNotes[interval_index];
             })
 
-            let test = {
+            const test = {
                 // 'id': `${element.name}_${element.order}_${element.root_note}`,
                 'mode': element.name, 
                 'grado': element.order,
