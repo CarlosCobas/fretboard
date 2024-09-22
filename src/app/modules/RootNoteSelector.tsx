@@ -10,7 +10,7 @@ export default function RootNoteSelector({rootNote, onChangeRootNote} : { rootNo
 
         <div className="input-element">
             <FormControl fullWidth>
-                <InputLabel id="root-note-selector-label">Select Root Note</InputLabel>
+                <InputLabel id="root-note-selector-label">Elige la tónica</InputLabel>
                 <Select
                     labelId="root-note-selector-label"
                     id="root-note-selector"

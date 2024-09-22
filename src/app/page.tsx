@@ -25,7 +25,7 @@ export default function Home() {
     <main>
       <Toolbar rootNote={rootNote} modality={modality} onChangeRootNote={onChangeRootNote} onChangeModality={onChangeModality}/>      
       <Fretboard rootNote={rootNote} modality={modality}/>
-      {/* <ModesTable rootNote={rootNote}/> */}
+      <ModesTable rootNote={rootNote}/>
     </main>
   );
 }

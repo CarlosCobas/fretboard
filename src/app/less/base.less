@@ -35,11 +35,15 @@ body {
 
 
 .toolbar-holder {
-    padding: 30px 0;
-    width: 96%;
+    padding: 10px 0;
     margin: 0 auto;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 999999;
 
     .toolbar-flex {
+        width: 96%;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -48,6 +52,7 @@ body {
         .input-element {
             padding: 15px 15px;
             flex-basis: auto;
+            min-width: 250px;
         }
     }
 }
@@ -250,5 +255,9 @@ body {
 
 
    
+}
+
+.modes-table {
+    padding-bottom: 30px;
 }
 

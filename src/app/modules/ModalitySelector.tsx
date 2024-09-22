@@ -11,7 +11,7 @@ export default function Modalityslector({modality, onChangeModality} : { modalit
 
         <div className="input-element">
             <FormControl fullWidth>
-                <InputLabel id="modality-selector-label">Select Modality</InputLabel>
+                <InputLabel id="modality-selector-label">Elige una modalidad</InputLabel>
                 <Select
                     labelId="modality-selector-label"
                     id="modality-selector"

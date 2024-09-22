@@ -20,11 +20,15 @@ body {
   color: #000000;
 }
 .toolbar-holder {
-  padding: 30px 0;
-  width: 96%;
+  padding: 10px 0;
   margin: 0 auto;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 999999;
 }
 .toolbar-holder .toolbar-flex {
+  width: 96%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -33,6 +37,7 @@ body {
 .toolbar-holder .toolbar-flex .input-element {
   padding: 15px 15px;
   flex-basis: auto;
+  min-width: 250px;
 }
 .fretboard-section {
   width: 100%;
@@ -195,4 +200,7 @@ body {
 }
 .fretboard-section .fretboard .fret:nth-child(13)::before {
   top: 33%;
+}
+.modes-table {
+  padding-bottom: 30px;
 }
